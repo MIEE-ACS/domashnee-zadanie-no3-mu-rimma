@@ -28,8 +28,11 @@ namespace hw3
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            string text = txtBox.Text; /*введённый текст*/
+            string text = txtBox.Text; //введённый текст
             int N1 = Regex.Matches(text, @"[\.!\?]\s([A-Z]|[А-Я])", RegexOptions.IgnoreCase).Count;
+            //ищем в указанной строке заданные символы
+            //options - побитовая комбинация значений перечисления, задающая параметры для сопоставления
+            //ignoreCase - не учитывать регистр
             txtResult.Text = N1.ToString();
         }
     }
